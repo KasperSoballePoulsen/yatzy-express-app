@@ -1,1 +1,0 @@
-{"player":{"playerId":0,"playerName":"Malthe","lockedPlayerPoints":{"bonus":0,"s2":2,"s5":0},"sum":0,"throwCount":2,"gameDice":[{"eyesCount":4,"isHold":false},{"eyesCount":6,"isHold":false},{"eyesCount":3,"isHold":false},{"eyesCount":2,"isHold":false},{"eyesCount":4,"isHold":false}]}}
