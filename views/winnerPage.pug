@@ -1,0 +1,11 @@
+include includes/header.pug 
+body
+    h1 Game Is Over
+    label Results:
+    ol
+        each user in users
+            li= user
+    br
+    form(action="/" method="get") 
+       button(type='submit') Back To Front Page
+    

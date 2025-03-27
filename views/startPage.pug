@@ -1,0 +1,15 @@
+include includes/header.pug
+body
+    h1 Create Player
+    label Playername 
+        input(type='text', name='usernameText' id='usernameText')
+        button(type='button', name='addUserButton', id='addUserButton') Add Player
+    br
+    form(action="/gamePage" method="get") 
+        button(type='submit' id='startGameButton') START GAME
+    h1 List Of Players 
+    ul(id= 'usernameList')
+        
+    
+
+    

@@ -1,0 +1,1 @@
+{"player":{"playerId":0,"playerName":"Kasper","lockedPlayerPoints":{"bonus":0,"s1":1,"s2":0},"sum":0,"throwCount":2,"gameDice":[{"eyesCount":6,"isHold":false},{"eyesCount":6,"isHold":false},{"eyesCount":5,"isHold":false},{"eyesCount":1,"isHold":false},{"eyesCount":2,"isHold":false}]}}

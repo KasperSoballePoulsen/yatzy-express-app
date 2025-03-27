@@ -1,0 +1,165 @@
+
+#containerBig {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: "upperGrid" "lowerGrid";
+    background: linear-gradient(to bottom right, #ff7e5f, #feb47b);
+    height: 100%;
+    border-radius: 10px; 
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+    width: 40%;
+    margin: auto;
+    position: relative;
+}
+
+
+#containerEyes {
+    grid-area: upperGrid;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "die1 die2 die3 die4 die5"
+    "hold1 hold2 hold3 hold4 hold5"
+    "turnInfo . . . roll";
+    border: 2px solid black;
+    padding: 10px;
+    margin: 30px;
+    margin-bottom: 5px;
+}
+
+#containerEyes img {
+    width: 80px;
+    margin-bottom: 0px;
+}
+
+#containerEyes input {
+    margin-top: none;
+}
+
+#die1 { grid-area: die1; border-radius: 5px}
+#die2 { grid-area: die2; border-radius: 5px}
+#die3 { grid-area: die3; border-radius: 5px}
+#die4 { grid-area: die4; border-radius: 5px}
+#die5 { grid-area: die5; border-radius: 5px}
+
+
+
+#hold1 { grid-area: hold1; justify-self: left; }
+#hold2 { grid-area: hold2; justify-self: left; }
+#hold3 { grid-area: hold3; justify-self: left; }
+#hold4 { grid-area: hold4; justify-self: left; }
+#hold5 { grid-area: hold5; justify-self: left; }
+
+
+#roll { grid-area: roll; }
+#playerName {grid-area: turnInfo}
+#rollsLeft {grid-area: turnInfo; grid-row: 4}
+
+
+#containerPoints {
+    grid-area: lowerGrid;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(15, auto);
+    border: 2px solid black;
+    padding: 10px;
+    margin: 30px;
+    margin-top: 5px;
+    gap: 5px;
+}
+
+#containerPoints label {
+    text-align: right; 
+    padding-right: 10px; 
+}
+
+#containerPoints input {
+    width: 100%; 
+    border: none; 
+    border-radius: 5px; 
+    padding: 5px;
+    /*background-color: #ffffff;*/
+    transition: background-color 0.3s;
+}
+
+
+
+#s1Label { grid-column: 1; grid-row: 1; }
+#s2Label { grid-column: 1; grid-row: 2; }
+#s3Label { grid-column: 1; grid-row: 3; }
+#s4Label { grid-column: 1; grid-row: 4; }
+#s5Label { grid-column: 1; grid-row: 5; }
+#s6Label { grid-column: 1; grid-row: 6; }
+#onePairLabel { grid-column: 1; grid-row: 7; }
+#twoPairLabel { grid-column: 1; grid-row: 8; }
+#threeSameLabel { grid-column: 1; grid-row: 9; }
+#fourSameLabel { grid-column: 1; grid-row: 10; }
+#fullHouseLabel { grid-column: 1; grid-row: 11; }
+#smallStraightLabel { grid-column: 1; grid-row: 12; }
+#largeStraightLabel { grid-column: 1; grid-row: 13; }
+#chanceLabel { grid-column: 1; grid-row: 14; }
+#yatzyLabel { grid-column: 1; grid-row: 15; }
+#sumLabel { grid-column: 3; grid-row: 6; }
+#bonusLabel { grid-column: 5; grid-row: 6; }
+#totalLabel { grid-column: 3; grid-row: 15; }
+
+
+
+
+
+#s1 { grid-column: 2; grid-row: 1; }
+#s2 { grid-column: 2; grid-row: 2; }
+#s3 { grid-column: 2; grid-row: 3; }
+#s4 { grid-column: 2; grid-row: 4; }
+#s5 { grid-column: 2; grid-row: 5; }
+#s6 { grid-column: 2; grid-row: 6; }
+#one-pair { grid-column: 2; grid-row: 7; }
+#two-pairs { grid-column: 2; grid-row: 8; }
+#three-same { grid-column: 2; grid-row: 9; }
+#four-same { grid-column: 2; grid-row: 10; }
+#full-house { grid-column: 2; grid-row: 11; }
+#small-straight { grid-column: 2; grid-row: 12; }
+#large-straight { grid-column: 2; grid-row: 13; }
+#chance { grid-column: 2; grid-row: 14; }
+#yatzy { grid-column: 2; grid-row: 15; }
+#sum { grid-column: 4; grid-row: 6; }
+#bonus { grid-column: 6; grid-row: 6; }
+#total { grid-column: 4; grid-row: 15; }
+
+    
+
+#containerPoints input:hover {
+    background-color: #eeeeee;
+    
+}
+
+input#bonus:hover,
+input#total:hover,
+input#sum:hover, p#playerName, p#rollsLeft {
+    cursor: default;
+}
+
+input.pointField:hover, button#roll:hover, input.holdsCheckbox {
+    cursor: pointer
+}
+
+
+
+input[type="checkbox"]:checked {
+    accent-color: green;
+
+}
+
+#roll:disabled {
+    background-color: #e0e0e0;
+    color: pink;
+    cursor: not-allowed;
+}
+
+.pointField:disabled, #bonus:disabled {
+    background-color: lightgreen
+}
+
+
+    

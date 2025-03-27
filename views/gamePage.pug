@@ -1,0 +1,63 @@
+include includes/header.pug 
+body
+#containerBig
+  #containerEyes
+    img#die1.diceImg(src=`images/dice${diceValues[0]}.png` alt="")
+    input#hold1.holdsCheckbox(type="checkbox" checked= holds[0])
+    
+    img#die2.diceImg(src=`images/dice${diceValues[1]}.png` alt="")
+    input#hold2.holdsCheckbox(type="checkbox" checked= holds[1])
+    
+    img#die3.diceImg(src=`images/dice${diceValues[2]}.png` alt="")
+    input#hold3.holdsCheckbox(type="checkbox" checked= holds[2])
+    
+    img#die4.diceImg(src=`images/dice${diceValues[3]}.png` alt="")
+    input#hold4.holdsCheckbox(type="checkbox" checked= holds[3])
+    
+    img#die5.diceImg(src=`images/dice${diceValues[4]}.png` alt="")
+    input#hold5.holdsCheckbox(type="checkbox" checked= holds[4])
+    
+    p#playerName Player: #{playerName}
+    p#rollsLeft Rolls left: #{rollsLeft}
+    button#roll Roll
+
+    
+
+    
+  #containerPoints
+    label#s1Label(for="s1") 1-s
+    label#s2Label(for="s2") 2-s
+    label#s3Label(for="s3") 3-s
+    label#s4Label(for="s4") 4-s
+    label#s5Label(for="s5") 5-s
+    label#s6Label(for="s6") 6-s
+    label#onePairLabel(for="onePair") One pair
+    label#twoPairLabel(for="twoPair") Two pair
+    label#threeSameLabel(for="threeSame") Three same
+    label#fourSameLabel(for="fourSame") Four same
+    label#fullHouseLabel(for="fullHouse") Full house
+    label#smallStraightLabel(for="smallStraight") Small Straight
+    label#largeStraightLabel(for="largeStraight") Large Straight
+    label#chanceLabel(for="chance") Chance
+    label#yatzyLabel(for="yatzy") Yatzy
+    label#sumLabel(for="Sum") Sum
+    label#bonusLabel(for="Bonus") Bonus
+    label#totalLabel(for="Total") Total
+    input#s1.pointField(type="text" name="s1" placeholder="" value=(points.s1 || '') readonly= !points.s1 disabled= points.s1)
+    input#s2.pointField(type="text" name="s2" placeholder="" value=(points.s2 || '') readonly= !points.s2 disabled= points.s2)
+    input#s3.pointField(type="text" name="s3" placeholder="" value=(points.s3 || '') readonly= !points.s3 disabled= points.s3)
+    input#s4.pointField(type="text" name="s4" placeholder="" value=(points.s4 || '') readonly= !points.s4 disabled= points.s4)
+    input#s5.pointField(type="text" name="s5" placeholder="" value=(points.s5 || '') readonly= !points.s5 disabled= points.s5)
+    input#s6.pointField(type="text" name="s6" placeholder="" value=(points.s6 || '') readonly= !points.s6 disabled= points.s6)
+    input#one-pair.pointField(type="text" name="one-pair" placeholder="" value=(points['one-pair'] || '') readonly= !points['one-pair'] disabled= points['one-pair'])
+    input#two-pairs.pointField(type="text" name="two-pairs" placeholder="" value=(points['two-pairs'] || '') readonly= !points['two-pairs'] disabled= points['two-pairs'])
+    input#three-same.pointField(type="text" name="three-same" placeholder="" value=(points['three-same'] || '') readonly= !points['three-same'] disabled= points['three-same'])
+    input#four-same.pointField(type="text" name="four-same" placeholder="" value=(points['four-same'] || '') readonly= !points['four-same'] disabled= points['four-same'])
+    input#full-house.pointField(type="text" name="full-house" placeholder="" value=(points['full-house'] || '') readonly= !points['full-house'] disabled= points['full-house'])
+    input#small-straight.pointField(type="text" name="small-straight" placeholder="" value=(points['small-straight'] || '') readonly= !points['small-straight'] disabled= points['small-straight'])
+    input#large-straight.pointField(type="text" name="large-straight" placeholder="" value=(points['large-straight'] || '') readonly= !points['large-straight'] disabled= points['large-straight'])
+    input#chance.pointField(type="text" name="chance" placeholder="" value=(points.chance || '') readonly= !points.chance disabled= points.chance)
+    input#yatzy.pointField(type="text" name="yatzy" placeholder="" value=(points.yatzy || '') readonly= !points.yatzy disabled= points.yatzy)
+    input#bonus(type="text" name="Bonus" placeholder="" value= points.bonus readonly= points.bonus === 0 disabled= points.bonus !== 0)  
+    input#total(type="text" name="Total" placeholder="" readonly value= total)
+    input#sum(type="text" name="Sum" placeholder="" readonly value= sum)
